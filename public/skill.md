@@ -1,6 +1,6 @@
-# BMBL AI — Agent Onboarding
+# CATION AI — Agent Onboarding
 
-You are configuring a developer's machine to connect to the BMBL AI gateway.
+You are configuring a developer's machine to connect to the CATION AI gateway.
 Follow these steps exactly. Ask the user for input where indicated.
 
 ## Prerequisites
@@ -17,7 +17,7 @@ bunx oh-my-opencode install
 ## Step 1: Get the API key
 
 Ask the user:
-> "What is your BMBL LiteLLM API key? (Get it from your lab admin if you don't have one.)"
+> "What is your CATION AI API key? (Get it from your lab admin if you don't have one.)"
 
 Store the key they provide as `$USER_API_KEY`.
 
@@ -39,7 +39,7 @@ Read `~/.config/opencode/opencode.json`. Add or update the `bmbl-litellm` provid
 {
   "bmbl-litellm": {
     "npm": "@ai-sdk/openai-compatible",
-    "name": "BMBL LiteLLM",
+    "name": "CATION AI",
     "options": {
       "name": "bmbl-litellm",
       "apiKey": "{env:BMBL_LITELLM_API_KEY}",
@@ -47,32 +47,32 @@ Read `~/.config/opencode/opencode.json`. Add or update the `bmbl-litellm` provid
     },
     "models": {
       "minimax-m2.5": {
-        "name": "MiniMax M2.5 (BMBL)",
+        "name": "MiniMax M2.5 (CATION)",
         "limit": { "context": 196608, "output": 16384 },
         "modalities": { "input": ["text"], "output": ["text"] }
       },
       "glm-5": {
-        "name": "GLM-5 (BMBL)",
+        "name": "GLM-5 (CATION)",
         "limit": { "context": 131072, "output": 8192 },
         "modalities": { "input": ["text"], "output": ["text"] }
       },
       "gpt-4o": {
-        "name": "GPT-4o (BMBL)",
+        "name": "GPT-4o (CATION)",
         "limit": { "context": 128000, "output": 16384 },
         "modalities": { "input": ["text", "image"], "output": ["text"] }
       },
       "gpt-5.2": {
-        "name": "GPT-5.2 (BMBL)",
+        "name": "GPT-5.2 (CATION)",
         "limit": { "context": 128000, "output": 16384 },
         "modalities": { "input": ["text", "image"], "output": ["text"] }
       },
       "kimi-k2.5": {
-        "name": "Kimi-K2.5 (BMBL)",
+        "name": "Kimi-K2.5 (CATION)",
         "limit": { "context": 131072, "output": 8192 },
         "modalities": { "input": ["text"], "output": ["text"] }
       },
       "gpt-5.3-codex": {
-        "name": "GPT-5.3 Codex (BMBL)",
+        "name": "GPT-5.3 Codex (CATION)",
         "limit": { "context": 192000, "output": 32768 },
         "modalities": { "input": ["text", "image"], "output": ["text"] }
       }
@@ -90,7 +90,7 @@ Also set the default model in the top-level config:
 
 ## Step 4: Configure oh-my-opencode agent routing
 
-Read `~/.config/opencode/oh-my-opencode.json`. Set all agents and categories to use BMBL models:
+Read `~/.config/opencode/oh-my-opencode.json`. Set all agents and categories to use CATION AI models:
 
 ```json
 {
@@ -140,7 +140,7 @@ curl -s https://bmblx.bmi.osumc.edu/ai/v1/chat/completions \
 ```
 
 If you get a valid response, tell the user:
-> "You're all set! BMBL AI is configured. Your default model is MiniMax M2.5. Run `opencode` to start coding."
+> "You're all set! CATION AI is configured. Your default model is MiniMax M2.5. Run `opencode` to start coding."
 
 ## Available Models
 

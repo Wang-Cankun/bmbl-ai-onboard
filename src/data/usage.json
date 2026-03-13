@@ -1,0 +1,23 @@
+{
+  "lastUpdated": "2026-03-13",
+  "period": "Mar 11–13, 2026",
+  "totals": {
+    "requests": 217,
+    "tokens": 7595860,
+    "spend": 0.22
+  },
+  "byModel": [
+    { "model": "MiniMax M2.5", "requests": 189, "tokens": 7582784, "spend": 0.17 },
+    { "model": "Kimi K2.5", "requests": 16, "tokens": 12852, "spend": 0.04 },
+    { "model": "GPT-4o", "requests": 4, "tokens": 40, "spend": 0.00 },
+    { "model": "GPT-5.3 Codex", "requests": 2, "tokens": 77, "spend": 0.00 },
+    { "model": "GPT-5.4 Pro", "requests": 1, "tokens": 24, "spend": 0.00 },
+    { "model": "GPT-5.2", "requests": 1, "tokens": 23, "spend": 0.00 },
+    { "model": "GLM-5", "requests": 1, "tokens": 60, "spend": 0.00 }
+  ],
+  "daily": [
+    { "date": "Mar 11", "spend": 0.004 },
+    { "date": "Mar 12", "spend": 0.037 },
+    { "date": "Mar 13", "spend": 0.175 }
+  ]
+}
