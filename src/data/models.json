@@ -1,0 +1,57 @@
+[
+  {
+    "id": "minimax-m2.5",
+    "name": "MiniMax M2.5",
+    "description": "Fast general-purpose model. Great balance of speed, quality, and cost.",
+    "badge": "general",
+    "context": "196K",
+    "pricing": { "input": "$0.30", "output": "$1.20" },
+    "unit": "per M tokens",
+    "recommended": true
+  },
+  {
+    "id": "gpt-5.3-codex",
+    "name": "GPT-5.3 Codex",
+    "description": "Specialized code generation model. Best for writing and refactoring code.",
+    "badge": "code",
+    "context": "192K",
+    "pricing": { "input": "$2.50", "output": "$10.00" },
+    "unit": "per M tokens"
+  },
+  {
+    "id": "glm-5",
+    "name": "GLM-5",
+    "description": "Reasoning model with inline chain-of-thought. Good for analytical tasks.",
+    "badge": "reasoning",
+    "context": "131K",
+    "pricing": { "input": "$0.50", "output": "$2.00" },
+    "unit": "per M tokens"
+  },
+  {
+    "id": "gpt-4o",
+    "name": "GPT-4o",
+    "description": "Multimodal model supporting text and images. Reliable all-rounder.",
+    "badge": "general",
+    "context": "128K",
+    "pricing": { "input": "$2.50", "output": "$10.00" },
+    "unit": "per M tokens"
+  },
+  {
+    "id": "gpt-5.2",
+    "name": "GPT-5.2",
+    "description": "Latest GPT generation. Strong on complex reasoning and long context.",
+    "badge": "general",
+    "context": "128K",
+    "pricing": { "input": "$2.50", "output": "$10.00" },
+    "unit": "per M tokens"
+  },
+  {
+    "id": "kimi-k2.5",
+    "name": "Kimi K2.5",
+    "description": "Reasoning model by Moonshot AI. Strong on math and analytical tasks.",
+    "badge": "reasoning",
+    "context": "131K",
+    "pricing": { "input": "$0.60", "output": "$2.40" },
+    "unit": "per M tokens"
+  }
+]

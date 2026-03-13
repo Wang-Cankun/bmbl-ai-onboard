@@ -1,0 +1,60 @@
+---
+const agentCommand = 'Read https://bmblx.bmi.osumc.edu/onboard/skill.md and follow the instructions to connect to BMBL AI';
+---
+
+<section id="get-started" class="max-w-5xl mx-auto px-6 py-20 lg:py-28">
+  <p class="text-sm font-medium tracking-[0.2em] uppercase text-scarlet-500 mb-4">03 — Onboarding</p>
+  <h2
+    class="font-display text-4xl lg:text-5xl text-warm-900"
+    style="letter-spacing: -0.01em;"
+  >
+    Start in 30 seconds
+  </h2>
+  <p class="mt-4 text-warm-600 max-w-lg text-lg">
+    Tell your AI coding agent to configure itself. No manual setup needed.
+  </p>
+
+  <div class="mt-12 bg-warm-950 text-warm-50 p-8 lg:p-10">
+    <p class="text-sm font-semibold tracking-[0.15em] uppercase text-scarlet-400 mb-6">
+      Tell your AI agent
+    </p>
+    <div class="relative">
+      <pre class="font-mono text-sm lg:text-base leading-relaxed text-warm-200 whitespace-pre-wrap break-words pr-16"><code>{agentCommand}</code></pre>
+      <button
+        data-copy
+        data-text={agentCommand}
+        class="absolute top-0 right-0 px-3 py-1.5 text-xs font-mono text-warm-400 hover:text-white border border-warm-700 hover:border-warm-500 transition-colors cursor-pointer"
+      >
+        copy
+      </button>
+    </div>
+    <p class="mt-6 text-sm text-warm-400">
+      Works with OpenCode, Claude Code, Cursor, and any agent that can read URLs.
+    </p>
+  </div>
+
+  <details class="mt-8 group">
+    <summary class="cursor-pointer text-sm font-semibold tracking-[0.15em] uppercase text-warm-500 hover:text-warm-700 transition-colors list-none flex items-center gap-2">
+      <span class="text-warm-400 transition-transform group-open:rotate-90 inline-block">&#9654;</span>
+      Manual setup
+    </summary>
+    <div class="mt-6 pl-6 border-l border-warm-200 space-y-6 text-warm-600">
+      <div>
+        <p class="font-semibold text-warm-800 mb-1">1. Install OpenCode</p>
+        <code class="text-sm font-mono text-warm-500">curl -fsSL https://opencode.ai/install | bash</code>
+      </div>
+      <div>
+        <p class="font-semibold text-warm-800 mb-1">2. Install oh-my-opencode</p>
+        <code class="text-sm font-mono text-warm-500">bunx oh-my-opencode install</code>
+      </div>
+      <div>
+        <p class="font-semibold text-warm-800 mb-1">3. Get your API key</p>
+        <p class="text-sm">Contact your lab admin (Cankun) for a virtual key with your budget allocation.</p>
+      </div>
+      <div>
+        <p class="font-semibold text-warm-800 mb-1">4. Let your agent do the rest</p>
+        <p class="text-sm">Paste the command above into your agent — it reads skill.md and configures everything automatically.</p>
+      </div>
+    </div>
+  </details>
+</section>

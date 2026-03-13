@@ -1,0 +1,64 @@
+---
+import models from '../data/models.json';
+
+const featured = models.find(m => m.recommended);
+const others = models.filter(m => !m.recommended);
+
+const badgeStyles: Record<string, string> = {
+  general: 'bg-warm-200 text-warm-700',
+  code: 'bg-scarlet-100 text-scarlet-700',
+  reasoning: 'bg-scarlet-50 text-scarlet-600'
+};
+---
+
+<section id="models" class="max-w-5xl mx-auto px-6 py-20 lg:py-28">
+  <p class="text-sm font-medium tracking-[0.2em] uppercase text-scarlet-500 mb-4">01 — Models</p>
+  <h2
+    class="font-display text-4xl lg:text-5xl text-warm-900"
+    style="letter-spacing: -0.01em;"
+  >
+    Choose your model
+  </h2>
+  <p class="mt-4 text-warm-600 max-w-lg text-lg">
+    From fast general-purpose to specialized reasoning and code generation. All accessible through a single endpoint.
+  </p>
+
+  {featured && (
+    <div class="mt-16 border-l-2 border-scarlet-500 pl-8 py-2">
+      <div class="flex flex-wrap items-center gap-3 mb-2">
+        <span class={`text-[0.65rem] font-semibold tracking-[0.15em] uppercase px-2.5 py-1 ${badgeStyles[featured.badge]}`}>
+          {featured.badge}
+        </span>
+        <span class="text-[0.65rem] font-semibold tracking-[0.15em] uppercase px-2.5 py-1 bg-scarlet-500 text-white">
+          Recommended
+        </span>
+      </div>
+      <h3 class="font-display text-3xl lg:text-4xl text-warm-900 italic">{featured.name}</h3>
+      <p class="mt-2 text-warm-600 text-lg">{featured.description}</p>
+      <div class="mt-4 flex flex-wrap gap-x-8 gap-y-2 text-sm text-warm-500">
+        <span>{featured.context} context</span>
+        <span>{featured.pricing.input} input / {featured.pricing.output} output {featured.unit}</span>
+      </div>
+    </div>
+  )}
+
+  <div class="mt-12 divide-y divide-warm-200">
+    {others.map(model => (
+      <div class="py-6 grid grid-cols-1 md:grid-cols-[1fr_auto] gap-4 items-start">
+        <div>
+          <div class="flex items-center gap-3 mb-1">
+            <h3 class="font-display text-2xl text-warm-900 italic">{model.name}</h3>
+            <span class={`text-[0.6rem] font-semibold tracking-[0.15em] uppercase px-2 py-0.5 ${badgeStyles[model.badge]}`}>
+              {model.badge}
+            </span>
+          </div>
+          <p class="text-warm-600">{model.description}</p>
+        </div>
+        <div class="text-sm text-warm-500 md:text-right md:pt-1.5">
+          <div>{model.context} context</div>
+          <div class="text-warm-400">{model.pricing.input} / {model.pricing.output}</div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

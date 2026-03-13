@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import ModelCatalog from '../components/ModelCatalog.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import GetStarted from '../components/GetStarted.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base>
+  <main>
+    <Hero />
+    <ModelCatalog />
+    <HowItWorks />
+    <GetStarted />
+  </main>
+  <Footer />
+</Base>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const text = btn.dataset.text ?? '';
+      await navigator.clipboard.writeText(text);
+      const original = btn.textContent;
+      btn.textContent = 'copied';
+      setTimeout(() => { btn.textContent = original; }, 2000);
+    });
+  });
+</script>
